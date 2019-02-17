@@ -16,17 +16,18 @@ module.exports = {
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js'],
-  modulePathIgnorePatterns: ['dist'],
   moduleNameMapper: {
     '@taxi/(.+)$': '<rootDir>packages/$1/src',
   },
+  modulePathIgnorePatterns: ['dist'],
   notify: true,
   notifyMode: 'always',
   roots: ['<rootDir>packages'],
-  testMatch: ['**/__tests__/*.+(ts|tsx|js)', '**/*.test.+(ts|tsx|js)'],
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-  },
   setupTestFrameworkScriptFile: '<rootDir>jest/setupTests.ts',
   snapshotSerializers: ['enzyme-to-json/serializer'],
+  testMatch: ['**/__tests__/*.+(ts|tsx|js)', '**/*.test.+(ts|tsx|js)'],
+  testPathIgnorePatterns: ['packages/ui'],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  }
 };

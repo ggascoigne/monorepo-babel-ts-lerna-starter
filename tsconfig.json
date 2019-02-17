@@ -10,10 +10,7 @@
     "removeComments": true,
     "rootDir": "./",
     "baseUrl": "./",
-    "paths": {
-      "@taxi/*": ["packages/*/src"],
-      "*": ["node_modules", "packages"]
-    }
+    "forceConsistentCasingInFileNames": true
   },
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true,

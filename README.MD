@@ -1,5 +1,31 @@
 # Monorepo
 
+Note that this repo has been forked to demonstrate adding a create-react-app based application to the repo.
+
+Installation of dependencies and library tests can be run by running:
+
+```sh
+$ yarn clean:install && yarn build:declarations && yarn build && yarn test
+```
+
+Then the ui can be built:
+
+```sh
+$ yarn build:ui
+```
+
+UI test can be run with
+
+```sh
+$ yarn test:ui
+```
+
+Note that this fails currently!
+
+---
+
+Original readme
+
 - [Monorepo](#monorepo)
   - [The goal](#the-goal)
   - [Pre-requirements](#pre-requirements)
