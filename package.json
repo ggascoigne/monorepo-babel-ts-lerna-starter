@@ -7,6 +7,7 @@
   "private": true,
   "description": "Test monorepo with ts and lerna",
   "scripts": {
+    "clean" : "rm -rf packages/*/dist",
     "build-storybook": "build-storybook",
     "prebuild": "run-p tsc lint",
     "build": "lerna exec --parallel 'BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments'",
@@ -23,7 +24,7 @@
     "storybook": "start-storybook -p 6006",
     "test": "jest",
     "tsc": "tsc",
-    "build:declarations": "lerna exec --parallel 'tsc --project ./tsconfig.build.json'"
+    "build:declarations": "lerna exec --stream 'tsc --project ./tsconfig.build.json'"
   },
   "repository": {
     "type": "git",
