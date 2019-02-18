@@ -1,5 +1,5 @@
-import { FancyButton } from '@taxi/fancy-button-js';
-import { LoginForm } from '@taxi/login-form-ts';
+import { FancyButton } from '@taxi/fancy-button';
+import { LoginForm } from '@taxi/login-form';
 import React, { Component } from 'react';
 import './App.css';
 

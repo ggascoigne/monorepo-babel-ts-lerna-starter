@@ -1,4 +1,4 @@
-import { Input } from '@taxi/input-ts';
+import { Input } from '@taxi/input';
 import * as React from 'react';
 import styled from 'styled-components';
 

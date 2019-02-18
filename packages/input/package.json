@@ -1,5 +1,5 @@
 {
-  "name": "@taxi/input-ts",
+  "name": "@taxi/input",
   "version": "1.0.0",
   "description": "Input component",
   "private": true,

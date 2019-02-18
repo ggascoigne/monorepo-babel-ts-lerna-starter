@@ -1,5 +1,5 @@
 {
-  "name": "@taxi/login-form-ts",
+  "name": "@taxi/login-form",
   "version": "1.0.0",
   "description": "Login form component",
   "private": true,
@@ -23,6 +23,6 @@
     "dist"
   ],
   "dependencies": {
-    "@taxi/input-ts": "^1.0.0"
+    "@taxi/input": "^1.0.0"
   }
 }

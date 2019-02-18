@@ -1,5 +1,5 @@
 {
-  "name": "@taxi/fancy-button-js",
+  "name": "@taxi/fancy-button",
   "version": "1.0.0",
   "description": "Fancy Button component, js in a mostly ts project",
   "private": true,
