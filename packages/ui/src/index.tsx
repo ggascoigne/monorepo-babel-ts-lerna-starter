@@ -4,7 +4,17 @@ import App from './App';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootElement = document.getElementById('root');
+
+const render = (Component: React.ComponentType) => {
+  return ReactDOM.render(<Component />, rootElement);
+};
+
+render(App);
+
+if (module.hot) {
+  module.hot.accept('./App', () => render(require('./App').default));
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,0 +1,20 @@
+{
+  "name": "@taxi/fancy-button-js",
+  "version": "1.0.0",
+  "description": "Fancy Button component, js in a mostly ts project",
+  "private": true,
+  "author": "ggp <guy@wyrdrune.com>",
+  "homepage": "https://github.com/ggascoigne/monorepo-babel-ts-lerna-starter",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^16.5.1",
+    "styled-components": "^3.4.6"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  }
+}

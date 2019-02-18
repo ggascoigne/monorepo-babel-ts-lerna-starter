@@ -1,7 +1,8 @@
 {
-  "name": "@taxi/input",
+  "name": "@taxi/input-ts",
   "version": "1.0.0",
   "description": "Input component",
+  "private": true,
   "author": "chef <serhii.havrylenko@gmail.com>",
   "homepage": "https://github.com/serhii-havrylenko/monorepo-babel-ts-lerna-starter",
   "license": "MIT",
@@ -17,8 +18,5 @@
   "peerDependencies": {
     "react": "^16.5.1",
     "styled-components": "^3.4.6"
-  },
-  "publishConfig": {
-    "registry": "http://localhost:4873"
   }
 }
