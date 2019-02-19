@@ -16,7 +16,7 @@ exports[`LoginForm should match snapshot and styles 1`] = `
   text-align: right;
 }
 
-<Component>
+<LoginForm>
   <styled.div>
     <div
       className="c0"
@@ -40,5 +40,5 @@ exports[`LoginForm should match snapshot and styles 1`] = `
       </styled.div>
     </div>
   </styled.div>
-</Component>
+</LoginForm>
 `;

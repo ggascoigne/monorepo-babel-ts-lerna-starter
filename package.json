@@ -8,12 +8,12 @@
   "description": "Test monorepo with ts and lerna",
   "scripts": {
     "prepare": "lerna link --force-local",
-    "build:libs": "yarn lerna:exec:no-ui --parallel 'BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .js,.ts,.tsx --no-comments'",
+    "build:libs": "yarn lerna:exec:no-ui --parallel 'BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .js,.ts,.tsx --no-comments --copy-files'",
     "build": "run-s clean build:libs build:ui",
-    "build:watch": "yarn lerna:exec:no-ui --parallel 'BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .js,.ts,.tsx --no-comments --watch'",
+    "build:watch": "yarn lerna:exec:no-ui --parallel 'BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .js,.ts,.tsx --no-comments --copy-files --watch'",
     "build-storybook": "build-storybook",
     "build:declarations": "run-p build:declarations:*",
-    "build:declarations:js": "yarn lerna:exec:js --stream 'mkdir -p dist && cp src/index.d.ts dist/index.d.ts'",
+    "build:declarations:js": "yarn lerna:exec:js --stream 'node ../../scripts/createModuleDeclaration.js'",
     "build:declarations:ts": "yarn lerna:exec:ts --stream 'tsc --project ./tsconfig.build.json'",
     "build:ui": "yarn lerna:exec:ui yarn build",
     "clean" : "rm -rf packages/*/dist",
@@ -21,7 +21,7 @@
     "clean:install": "npm-run-all clean:modules clean && yarn",
     "commit": "git-cz",
     "fix": "run-p -c 'lint:ts-* --fix'",
-    "lerna:exec:ts": "lerna exec --scope '**/{input,login-form}'",
+    "lerna:exec:ts": "lerna exec --scope '**/{app,input,login-form}'",
     "lerna:exec:js": "lerna exec --scope '**/fancy-button'",
     "lerna:exec:ui": "lerna exec --scope ui",
     "lerna:exec:no-ui": "lerna exec --ignore ui",
@@ -73,6 +73,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-loader": "^8.0.2",
+    "babel-jest": "^23.6.0",
     "commitizen": "^3.0.2",
     "cz-lerna-changelog": "^2.0.0",
     "enzyme": "^3.6.0",
@@ -93,13 +94,13 @@
     "stylelint-config-standard": "^18.2.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.3.2",
-    "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-plugin-prettier": "^1.3.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.3.3",
-    "webpack": "=4.28.3"
+    "webpack": "=4.28.3",
+    "webpack-bundle-analyzer": "^3.0.4"
   },
   "config": {
     "commitizen": {

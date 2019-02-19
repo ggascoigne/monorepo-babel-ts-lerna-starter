@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import AppWrapper from './AppWrapper';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
@@ -10,10 +10,12 @@ const render = (Component: React.ComponentType) => {
   return ReactDOM.render(<Component />, rootElement);
 };
 
-render(App);
+render(AppWrapper as React.ComponentType);
 
 if (module.hot) {
-  module.hot.accept('./App', () => render(require('./App').default));
+  module.hot.accept('./AppWrapper', () =>
+    render(require('./AppWrapper').default),
+  );
 }
 
 // If you want your app to work offline and load faster, you can change

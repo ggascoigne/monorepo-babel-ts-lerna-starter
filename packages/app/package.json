@@ -1,7 +1,7 @@
 {
-  "name": "@taxi/login-form",
+  "name": "@taxi/app",
   "version": "1.0.0",
-  "description": "Login form component",
+  "description": "Main application",
   "private": true,
   "main": "/dist/index.js",
   "types": "dist/index.d.ts",
@@ -23,6 +23,9 @@
     "dist"
   ],
   "dependencies": {
-    "@taxi/input": "^1.0.0"
+    "@taxi/login-form": "1.0.0",
+    "@taxi/fancy-button": "1.0.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
   }
 }
